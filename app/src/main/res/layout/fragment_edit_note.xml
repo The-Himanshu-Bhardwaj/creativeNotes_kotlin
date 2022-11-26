@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/darkBackground"
+        >
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/opensans_light"
+            android:textColor="@color/darkBackground"
+            android:background="@drawable/box_background"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/titleBox"
+            android:hint="Title"
+            android:paddingLeft="15dp"
+            />
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:fontFamily="@font/opensans_light"
+            android:textColor="@color/darkBackground"
+            android:background="@drawable/box_background"
+            app:layout_constraintTop_toBottomOf="@id/titleBox"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/subtitleBOX"
+            android:hint="Subtitle"
+            android:paddingLeft="15dp"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:orientation="horizontal"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:gravity="center"
+            app:layout_constraintTop_toBottomOf="@id/subtitleBOX"
+            android:id="@+id/linearBOX"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Priority"
+                android:layout_margin="10dp"
+                android:fontFamily="@font/opensans_light"
+                android:textColor="@color/fade_grey"
+                android:textSize="22sp"
+
+                />
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginLeft="20dp"
+                android:padding="5dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/greenDOT"
+                android:background="@drawable/green_icon"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:id="@+id/yellowDOT"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:background="@drawable/yellow_icon"/>
+
+            <ImageView
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:padding="5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:id="@+id/redDOT"
+                android:background="@drawable/red_icon"/>
+
+
+
+        </LinearLayout>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_margin="10dp"
+            android:gravity="left"
+            android:paddingTop="15dp"
+            android:fontFamily="@font/opensans_light"
+            android:textColor="@color/darkBackground"
+            android:background="@drawable/box_background"
+            app:layout_constraintTop_toBottomOf="@id/linearBOX"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:id="@+id/noteBOX"
+            android:hint="Add Note Here..."
+            android:paddingLeft="15dp"
+            />
+
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginBottom="16dp"
+            android:id="@+id/doneFAB"
+            android:layout_marginRight="16dp"
+            android:src="@drawable/done_icon"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
